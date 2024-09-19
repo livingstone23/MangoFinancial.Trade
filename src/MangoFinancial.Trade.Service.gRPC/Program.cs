@@ -1,9 +1,15 @@
+
+using MangoFinancial.Trade.Persistence;
 using MangoFinancial.Trade.Service.gRPC.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddGrpc();
+
+
+// Add services to the container. with the AddPersistenceServices extension method
+builder.Services.AddPersistenceServices(builder.Configuration);
 
 var app = builder.Build();
 
