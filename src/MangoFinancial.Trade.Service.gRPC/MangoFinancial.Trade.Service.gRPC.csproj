@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MangoFinancial.Trade.Persistence\MangoFinancial.Trade.Persistence.csproj" />
+    <ProjectReference Include="..\MangoFinancial.Trade.UseCases\MangoFinancial.Trade.UseCases.csproj" />
   </ItemGroup>
 
 </Project>

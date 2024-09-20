@@ -2,7 +2,7 @@
 using MangoFinancial.Trade.Persistence.Interceptors;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-
+using MangoFinancial.Trade.Interfaces.Persistence;
 
 
 namespace MangoFinancial.Trade.Persistence.Contexts;
@@ -12,7 +12,7 @@ namespace MangoFinancial.Trade.Persistence.Contexts;
 /// <summary>
 /// Class that represent the database context
 /// </summary>
-public class ApplicationDbContext: DbContext
+public class ApplicationDbContext: DbContext, IApplicationDbContext
 {
     
 

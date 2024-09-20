@@ -6,4 +6,21 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Commons\Mappings\" />
+    <Folder Include="Feature\Orders\Commands\CreateOrder\" />
+    <Folder Include="Feature\Orders\Commands\CancelOrder\" />
+    <Folder Include="Feature\Orders\Commands\UpdateOrder\" />
+    <Folder Include="Feature\Orders\Queries\GetAllOrder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MangoFinancial.Trade.Interfaces\MangoFinancial.Trade.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

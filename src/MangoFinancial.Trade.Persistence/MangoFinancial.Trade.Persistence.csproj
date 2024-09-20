@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MangoFinancial.Trade.Domain\MangoFinancial.Trade.Domain.csproj" />
+    <ProjectReference Include="..\MangoFinancial.Trade.Interfaces\MangoFinancial.Trade.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

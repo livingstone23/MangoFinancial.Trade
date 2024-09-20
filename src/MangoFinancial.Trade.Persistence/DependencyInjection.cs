@@ -1,4 +1,5 @@
-﻿using MangoFinancial.Trade.Persistence.Contexts;
+﻿using MangoFinancial.Trade.Interfaces.Persistence;
+using MangoFinancial.Trade.Persistence.Contexts;
 using MangoFinancial.Trade.Persistence.Interceptors;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,9 @@ public static class DependencyInjection
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("TradingConnection"),
                 builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+
+        ///Enable the use of the IApplicationDbContext interface
+        services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
 
         return services;
 
